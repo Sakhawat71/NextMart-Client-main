@@ -53,11 +53,11 @@ export default function Navbar() {
                         user ?
                             (
                                 <>
-                                    <Link href='/create-store'>
+                                    <Link href='/create-shop'>
                                         <Button
                                             variant='outline'
                                             className="rounded-full"
-                                        >create store</Button>
+                                        >Create Shop</Button>
                                     </Link>
 
                                     {/* drop down menu */}
