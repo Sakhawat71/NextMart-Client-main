@@ -6,7 +6,7 @@ const HomePage = () => {
   console.log(user);
   return (
     <div>
-      <h1 className="text-green-600 font-bold text-3xl">Welcome To NextMart Home Page</h1>
+      <h1 className="font-bold">Welcome To NextMart Home Page</h1>
     </div>
   );
 };
