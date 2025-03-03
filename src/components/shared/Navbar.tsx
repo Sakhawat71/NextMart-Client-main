@@ -1,6 +1,6 @@
 import Logo from "@/app/assets/svgs/Logo";
 import { Button } from "../ui/button";
-import { Heart, ShoppingBag } from "lucide-react";
+import { Heart, LogOut, ShoppingBag } from "lucide-react";
 import Link from "next/link";
 import {
     DropdownMenu,
@@ -51,8 +51,8 @@ export default function Navbar() {
                     <DropdownMenu>
                         <DropdownMenuTrigger>
                             <Avatar>
-                                <AvatarImage src="https://github.com/shadcn.png" />
-                                <AvatarFallback>CN</AvatarFallback>
+                                <AvatarImage src="https://i.ibb.co.com/4K27t1f/user.png" />
+                                <AvatarFallback>User</AvatarFallback>
                             </Avatar>
 
                         </DropdownMenuTrigger>
@@ -60,9 +60,13 @@ export default function Navbar() {
                             <DropdownMenuLabel>My Account</DropdownMenuLabel>
                             <DropdownMenuSeparator />
                             <DropdownMenuItem>Profile</DropdownMenuItem>
-                            <DropdownMenuItem>Billing</DropdownMenuItem>
-                            <DropdownMenuItem>Team</DropdownMenuItem>
-                            <DropdownMenuItem>Subscription</DropdownMenuItem>
+                            <DropdownMenuItem>Dashboard</DropdownMenuItem>
+                            <DropdownMenuItem>My Shop</DropdownMenuItem>
+                            <DropdownMenuSeparator />
+                            <DropdownMenuItem>
+                                <LogOut />
+                                <span>Logout</span>
+                            </DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
                 </nav>
