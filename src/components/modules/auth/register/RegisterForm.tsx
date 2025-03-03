@@ -18,7 +18,7 @@ import { registrationSchema } from "./registerValidation";
 import { registerUser } from "@/services/AuthService";
 import { toast } from "sonner";
 
-export default function RegisterForm() {
+export const RegisterForm = () => {
   const form = useForm({
     resolver: zodResolver(registrationSchema),
   });
@@ -34,6 +34,7 @@ export default function RegisterForm() {
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     try {
       const res = await registerUser(data);
+      console.log(res);
       if (res?.success) {
         toast.success(res?.message);
       } else {
