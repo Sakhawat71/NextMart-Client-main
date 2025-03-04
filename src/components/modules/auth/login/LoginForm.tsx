@@ -21,6 +21,7 @@ import {
 import { toast } from "sonner";
 import { loginSchema } from "./loginValidation";
 import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export const LoginForm = () => {
     const form = useForm({
@@ -28,6 +29,11 @@ export const LoginForm = () => {
     });
 
     const [reCaptchaStatus, setReCaptchaStatus] = useState(false);
+    const searchParams = useSearchParams();
+    const redirect = searchParams.get("redirectPath")
+    const router = useRouter();
+
+
 
     const {
         formState: { isSubmitting },
@@ -51,6 +57,11 @@ export const LoginForm = () => {
             console.log(res);
             if (res?.success) {
                 toast.success(res?.message);
+                if(redirect){
+                    router.push(redirect);
+                }else{
+                    router.push("/");
+                }
             } else {
                 toast.error(res?.message);
             }
