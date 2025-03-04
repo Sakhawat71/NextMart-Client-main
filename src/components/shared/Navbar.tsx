@@ -14,18 +14,29 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { logoutUser } from "@/services/AuthService";
 import { useUser } from "@/context/UserContext";
+import { usePathname, useRouter } from "next/navigation";
+import { predictedRoute } from "@/constants";
 
 
 
 export default function Navbar() {
 
     const { user, setIsLoading, isLoading } = useUser();
-    console.log(user);
+    // console.log(user);
+    const pathname = usePathname();
+    const router = useRouter();
 
     const handlelogout = () => {
         logoutUser();
         setIsLoading(true);
+        if(predictedRoute.some((route) => pathname.match(route))){
+            router.push("/");
+        }
     };
+
+    // if(isLoading){
+    //     return <div>Loading...</div>
+    // };
 
     return (
         <header className="border-b w-full">
