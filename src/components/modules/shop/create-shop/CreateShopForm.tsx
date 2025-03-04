@@ -49,7 +49,7 @@ export default function CreateShopForm() {
       formData.append("logo", imageFiles[0] as File);
 
       const res = await createShop(formData);
-      console.log(res);
+      // console.log(res);
 
       if (res.success) {
         toast.success(res.message);
