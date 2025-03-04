@@ -55,7 +55,7 @@ export default function Navbar() {
                                 <>
                                     <Link href='/create-shop'>
                                         <Button
-                                            variant='outline'
+                                            // variant='outline'
                                             className="rounded-full"
                                         >Create Shop</Button>
                                     </Link>
