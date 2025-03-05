@@ -27,6 +27,7 @@ import Link from "next/link";
 import Logo from "@/app/assets/svgs/Logo";
 
 const data = {
+  
   navMain: [
     {
       title: "Dashboard",
