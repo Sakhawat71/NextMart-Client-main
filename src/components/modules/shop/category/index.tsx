@@ -1,11 +1,11 @@
-import { Button } from '@/components/ui/button';
 import React from 'react';
+import CreateCategoryModal from './CreateCategoryModal';
 
 const ManageCategories = () => {
     return (
         <div>
             <h2>Manage Categories</h2>
-            <Button>Create Categroy</Button>
+            <CreateCategoryModal />
         </div>
     );
 };
