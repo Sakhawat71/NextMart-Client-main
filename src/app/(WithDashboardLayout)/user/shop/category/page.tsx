@@ -5,8 +5,7 @@ import React from 'react';
 const ProductCategoryPage = async() => {
 
     const {data} = await getAllCategories();
-    console.log(data);
-
+    // console.log(data);
     return (
         <div>
             <ManageCategories categories={data}/>
