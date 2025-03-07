@@ -70,7 +70,7 @@ const ManageCategories = ({ categories }: TCategoriesProps) => {
         <h1 className="text-xl font-bold">Manage Categories</h1>
         <CreateCategoryModal />
       </div>
-      {/* <NMTable data={categories} columns={columns} /> */}
+      <NMTable data={categories} columns={columns} />
     </div>
   );
 };
