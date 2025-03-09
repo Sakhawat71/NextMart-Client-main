@@ -2,12 +2,17 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns : [
+    remotePatterns: [
       {
-        protocol : 'https',
-        hostname : "**",
+        protocol: "https",
+        hostname: "**",
       },
     ],
+  },
+  experimental: {
+    serverActions: {
+      bodySizeLimit: "5mb",
+    },
   },
 };
 
