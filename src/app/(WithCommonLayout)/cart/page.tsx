@@ -12,8 +12,8 @@ const CartPage = () => {
       <div className="grid grid-cols-12 gap-8 my-5">
         <CartProducts />
         <Coupon />
-        <Address />
-        <PaymentDetails />
+        {/* <Address /> */}
+        {/* <PaymentDetails /> */}
       </div>
     </NMContainer>
   );
