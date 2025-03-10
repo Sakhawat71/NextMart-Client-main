@@ -14,7 +14,7 @@ import {
   shippingAddressSelector,
   updateCity,
   updateShippingAddress,
-} from "@/redux/features/cartSlice";
+} from "@/redux/features/cardSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 
 export default function Address() {

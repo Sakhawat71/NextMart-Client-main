@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
+import cartSlice from './features/cardSlice';
 
 export const makeStore = () => {
     return configureStore({
-        reducer: {},
+        reducer: {
+            cart : cartSlice,
+        },
     });
 };
 

@@ -12,7 +12,7 @@ import {
     shippingAddressSelector,
     shippingCostSelector,
     subTotalSelector,
-} from "@/redux/features/cartSlice";
+} from "@/redux/features/cardSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { createOrder } from "@/services/Cart";
 import { useRouter } from "next/navigation";
