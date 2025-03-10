@@ -29,7 +29,7 @@ export default function Navbar() {
     const handlelogout = () => {
         logoutUser();
         setIsLoading(true);
-        if(predictedRoute.some((route) => pathname.match(route))){
+        if (predictedRoute.some((route) => pathname.match(route))) {
             router.push("/");
         }
     };
@@ -56,9 +56,12 @@ export default function Navbar() {
                     <Button variant="outline" className="rounded-full p-0 size-10">
                         <Heart />
                     </Button>
-                    <Button variant="outline" className="rounded-full p-0 size-10">
-                        <ShoppingBag />
-                    </Button>
+
+                    <Link href="/cart">
+                        <Button variant="outline" className="rounded-full p-0 size-10">
+                            <ShoppingBag />
+                        </Button>
+                    </Link>
 
                     {
                         user ?
