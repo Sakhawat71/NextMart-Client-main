@@ -35,4 +35,9 @@ export interface IProduct {
     createdAt: string;
     updatedAt: string;
     offerPrice: number;
-}
+};
+
+
+export interface ICartProduct extends IProduct {
+    orderQuantity: number;
+};

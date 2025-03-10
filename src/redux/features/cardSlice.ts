@@ -1,10 +1,11 @@
-import { IProduct } from "@/types";
+import { ICartProduct } from "@/types";
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 
+
 interface IinitialState {
-    products: IProduct[];
-}
+    products: ICartProduct[];
+};
 
 const initialState: IinitialState = {
     products: []
@@ -16,9 +17,16 @@ const cartSlice = createSlice({
     reducers: {
         addProduct: (state, action) => {
 
-            // const productToAdd = state.products.find()
+            const productToAdd = state.products.find(
+                (product) => product._id === action.payload._id
+            );
 
-            state.products.push(action.payload);
+            if (productToAdd) {
+                productToAdd.orderQuantity += 1;
+                return;
+            };
+
+            state.products.push({ ...action.payload, orderQuantity: 1 });
         }
     },
 });
